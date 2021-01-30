@@ -28,8 +28,15 @@
             </ul>
         </nav>
     </header>
-
+    <div id="transaction-area">
+        <div class="box">
+         <h1>Congratulation</h1>
+         <br>
+         <h5>Your have successfully confirmed Ticket</h5>
+        </div>
+     </div>
     <!--Booking Section-->
+  <div id="booking-area">
     <main class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
@@ -100,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking-btn" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -108,6 +115,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
+  </div>
     <script>
         function handleTicketChange(ticket, isIncrease){
                            const ticketInput = document.getElementById(ticket + '-count');
@@ -134,6 +142,13 @@
                      const grandTotal = totalAmount + totalVat;
                      document.getElementById('grand-total').innerText = '$' + grandTotal;
                   }
+                  const bookingBtn = document.getElementById('booking-btn');
+                      bookingBtn.addEventListener("click",function(){
+                        const bookingArea = document.getElementById('booking-area');
+                        bookingArea.style.display = "none";
+                        const TransactionArea = document.getElementById('transaction-area');
+                        TransactionArea.style.display = "block";
+                  })
     </script>
 </body>
 </html>

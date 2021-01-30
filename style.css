@@ -13,7 +13,18 @@ body{
     background-attachment: scroll;
     background-size: cover;
 }
-
+.box{
+    margin-left: 600px;
+    margin-top: 100px;
+    padding: 100px;
+    height: 300px;
+    width: 600px;
+    color: green;
+    text-align: center;
+    background-color: #dfe0e9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
 nav{
     height: 50px;
     width: 100%;
@@ -119,4 +130,7 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#transaction-area{
+display: none;
 }
